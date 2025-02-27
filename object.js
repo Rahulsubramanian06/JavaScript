@@ -57,17 +57,50 @@ let human = {
     },
 };
 
-console.log(human.fullname());
+// console.log(human.fullname());
 
 // Tasks of objects basics
 // To check for emptiness of an object
 
-let emp = {std: "sdff",};
+let empl = {std: "sdff",};
 
 function isempty() {
-    for (let k in emp){
+    for (let k in empl){
         return true;
     }
  return false;
 }
 console.log(isempty());
+
+// sum 
+let emplo = {
+    jim: 100,
+    tim: 200,
+    kim: 300,
+    test:'2'
+};
+(function sum(){
+    let res=0;
+    for(let s in emplo){
+        console.log(s)
+        res = res + +emplo[s];
+    }
+    console.log(typeof emplo);
+})();
+
+// multiplying the numbers in an object by 2
+
+let emp = {
+        name: "rick",
+        title: "Developer",
+        salary: 10.5,
+        km: 30,
+    };
+    (function multiply(){
+        for(let n in emp){
+            if(typeof emp[n] === "number"){                
+                emp[n]*= 2;
+            }           
+        }
+        console.log(emp);
+    })();
