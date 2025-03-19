@@ -104,3 +104,16 @@ let emp = {
         }
         console.log(emp);
     })();
+
+//callback
+
+function one(rahul){
+    console.log("func-1");
+rahul();
+}
+
+function a(){
+    console.log("func-2")
+}
+
+console.log(one(a));
