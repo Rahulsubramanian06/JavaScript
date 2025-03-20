@@ -17,11 +17,11 @@ const admin ={
 
 let emp_copy = {}
 //copying the object using object_assign - nested obj change is reflected on both OE and copy
-// Object.assign(emp_copy, emp)
+Object.assign(emp_copy, emp)
 
-// emp_copy.location = "chennai"
-// console.log(emp);
-// console.log(emp_copy);
+emp_copy.location = "chennai"
+console.log(emp);
+console.log(emp_copy);
 
 // copying the object using structuredClone the change is not reflected on both the nested and outer object (OE and copy)
 
@@ -29,3 +29,4 @@ emp_copy = structuredClone(emp)
 emp_copy.emp1.location = "chennai"
 console.log(emp);
 console.log(emp_copy);
+
